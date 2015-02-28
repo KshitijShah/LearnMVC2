@@ -20,6 +20,7 @@ namespace HelloWorld.Controllers
 
         public ActionResult Test()
         {
+            ViewData["CurrentTime"] = DateTime.Now.ToString();
             return View("MyHomePage");
         }
 
