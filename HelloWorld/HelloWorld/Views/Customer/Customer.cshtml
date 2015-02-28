@@ -1,0 +1,51 @@
+﻿@model HelloWorld.Models.CustomerData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Customer</title>
+</head>
+<body>
+    <div>
+        <h4>CustomerData</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CustomerCode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Amount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Amount)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        
+        @Html.ActionLink("Back to List", "Index")
+
+         @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |*@
+    </p>
+</body>
+</html>

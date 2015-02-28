@@ -11,7 +11,9 @@ namespace HelloWorld
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
+
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.config");
 
             
             routes.MapRoute(
@@ -27,11 +29,30 @@ namespace HelloWorld
                 );
 
             routes.MapRoute(
+                name: "Home2",
+                url: "TestHome",
+                defaults: new { controller = "Home", action = "Test", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
+                name: "CurrentTime",
+                url: "CurrentTime",
+                defaults: new { controller = "Home", action = "CurrentTime", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
+                name: "Customer",
+                url: "Customer",
+                defaults: new { controller = "Customer", action = "Index", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                             name: "Default",
                             url: "{controller}/{action}/{id}",
                             defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
 
                         );
+
         }
     }
 }

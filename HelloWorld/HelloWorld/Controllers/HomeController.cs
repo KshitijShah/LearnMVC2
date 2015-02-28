@@ -17,5 +17,16 @@ namespace HelloWorld.Controllers
         {
             return View("MyHomePage");
         }
+
+        public ActionResult Test()
+        {
+            return View("MyHomePage");
+        }
+
+        public ActionResult CurrentTime()
+        {
+            ViewData["CurrentTime"] = DateTime.Now.ToString();
+            return View("MyHomePage");
+        }
     }
 }
