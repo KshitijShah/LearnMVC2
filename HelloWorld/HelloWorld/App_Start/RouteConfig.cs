@@ -15,6 +15,11 @@ namespace HelloWorld
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
             routes.IgnoreRoute("{resource}.config");
 
+            routes.MapRoute(
+                            name: "RegExpValidation",
+                            url: "RegularExpression",
+                            defaults: new { controller = "RegularExpression", action = "Index", id = UrlParameter.Optional }
+                            );
             
             routes.MapRoute(
                 name: "Home",
@@ -46,6 +51,7 @@ namespace HelloWorld
                 defaults: new { controller = "Customer", action = "Index", id = UrlParameter.Optional }
                 );
 
+            
             routes.MapRoute(
                             name: "Default",
                             url: "{controller}/{action}/{id}",

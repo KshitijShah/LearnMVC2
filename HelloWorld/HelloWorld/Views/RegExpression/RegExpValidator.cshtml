@@ -1,0 +1,50 @@
+﻿@model HelloWorld.Models.RegExpData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RegExpValidator</title>
+</head>
+<body>
+@using (Html.BeginForm())
+{
+
+    <div>
+        @Html.LabelFor(model => model.StringToValidate)
+        <div>
+            @Html.EditorFor(model => model.StringToValidate)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.RegularExprssion)
+        <div>
+            @Html.EditorFor(model => model.RegularExprssion)
+        </div>
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.ValidationResult)
+        <div>
+            @Html.EditorFor(model => model.ValidationResult)
+        </div>
+    </div>
+    <p>
+    </p>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Validate" class="btn btn-default" />
+        </div>
+    </div>
+
+
+} 
+
+</body>
+</html>
